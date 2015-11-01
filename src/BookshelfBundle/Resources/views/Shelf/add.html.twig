@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}BookshelfBundle:Shelfcreate:name{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Shelf</h1>
+    {% if errors is defined %}
+        {% for reeror in errors %}
+            Error: {{ error.message }} <br>
+        {% endfor %}
+    {% endif %}
+
+    {{ form_start(form, {action:path("bookshelf_shelf_add")}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

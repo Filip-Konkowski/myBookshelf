@@ -1,0 +1,4 @@
+bookshelf:
+    resource: "@BookshelfBundle/Controller/"
+    type:     annotation
+    prefix:   /

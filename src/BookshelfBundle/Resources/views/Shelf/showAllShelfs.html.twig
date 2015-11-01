@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}BookshelfBundle:Shelf:name{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Shelf:show All</h1>
+    {% for shelf in shelfs %}
+        No.{{ shelf.id }} <br>
+        Name of shelf: {{ shelf.name }}<br>
+        <a href="{{ path("bookshelf_shelf_del", {"shelfId":shelf.id} )}}">Delete</a> <br>
+        <a href="{{ path("bookshelf_shelf_show", {"shelfId":shelf.id} )}}">Info</a> <br> <br>
+    {% endfor %}
+
+{% endblock %}
